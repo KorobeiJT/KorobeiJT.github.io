@@ -1,2 +1,0 @@
-# KorobeiJT.github.io
-Portfolio
