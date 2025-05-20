@@ -14,7 +14,7 @@ code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
 u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
+tfoot, thead, tr, th, td, article, articledouble, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
@@ -25,7 +25,7 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
-article, aside, details, figcaption, figure,
+article, articledouble, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
@@ -2102,7 +2102,7 @@ input, select, textarea {
 
 /* Section/Article */
 
-	section.special, article.special {
+	section.special, articledouble.special, article.special {
 		text-align: center;
 	}
 
@@ -3018,6 +3018,30 @@ input, select, textarea {
 		flex-wrap: wrap;
 		margin: 0 0 2em 0;
 	}
+		.features articledouble {
+			padding: 1.75em 1.75em 0.1em 1.75em ;
+			background-color: #353849;
+			border-radius: 5px;
+			margin: 1.5em 0em 1.5em 0;
+			width: calc(100%);
+		}
+
+		.features articledouble .image {
+			border-radius: 5px 5px 0 0;
+			display: block;
+			margin-bottom: 1.75em;
+			margin-left: -1.75em;
+			margin-top: -1.75em;
+			position: relative;
+			width: calc(100% + 3.5em);
+		}
+
+			.features articledouble .image img {
+				border-radius: 5px 5px 0 0;
+				width: 100%;
+				max-height: 30em;
+				object-fit: cover;
+			}
 
 		.features article {
 			padding: 1.75em 1.75em 0.1em 1.75em ;
@@ -3050,6 +3074,11 @@ input, select, textarea {
 
 		@media screen and (max-width: 980px) {
 
+			.features articledouble {
+				margin: 1em 0 1em 0;
+				width: calc(100%);
+			}
+
 			.features article {
 				margin: 1em 2em 1em 0;
 				width: calc(50% - 1em);
@@ -3058,6 +3087,19 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
+
+			.features articledouble {
+				padding: 1.5em 1.5em 0.1em 1.5em ;
+				margin: 0.875em 0 0.875em 0;
+				width: calc(100%);
+			}
+
+				.features articledouble .image {
+					margin-bottom: 1.5em;
+					margin-left: -1.5em;
+					margin-top: -1.5em;
+					width: calc(100% + 3em);
+				}
 
 			.features article {
 				padding: 1.5em 1.5em 0.1em 1.5em ;
@@ -3076,9 +3118,14 @@ input, select, textarea {
 
 		@media screen and (max-width: 480px) {
 
+			
 			.features {
 				display: block;
 			}
+				.features articledouble {
+					width: 100%;
+					margin: 0 0 0 0 !important;
+				}
 
 				.features article {
 					width: 100%;
